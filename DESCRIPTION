@@ -1,0 +1,28 @@
+Package: evictionHotspots
+Title: Spatial Identification of Eviction Hotspots Using Moran's I
+Version: 0.1.0
+Authors@R: 
+    person(
+      given = "Oluwafisayo",
+      family = "Ajayi",
+      email = "oluwafisayo.ajayi@maine.edu",
+      role = c("aut", "cre")
+    )
+Description: 
+    Tools for identifying and visualizing spatial eviction hotspots using 
+    global and local spatial autocorrelation methods. The package computes 
+    Global Moran’s I and Local Indicators of Spatial Association (LISA) on 
+    eviction-related variables within sf objects, constructs spatial 
+    weights using k-nearest neighbors, and classifies statistically 
+    significant local clusters. Visualization functions support both 
+    static maps using tmap and interactive maps using leaflet.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    sf,
+    spdep,
+    stats,
+    tmap,
+    leaflet
