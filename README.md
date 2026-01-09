@@ -34,3 +34,30 @@ remotes::install_github("OluwafisayoAjayi/evictionHotspots")
 
 install.packages("remotes")
 remotes::install_github("OluwafisayoAjayi/evictionHotspots")
+
+## Usage
+
+```r
+library(evictionHotspots)
+library(sf)
+
+# Example data
+example_data <- st_as_sf(
+  data.frame(
+    id = 1:10,
+    evictions = sample(1:100, 10),
+    lon = runif(10, -100, -90),
+    lat = runif(10, 30, 40)
+  ),
+  coords = c("lon", "lat"),
+  crs = 4326
+)
+
+# Identify hotspots
+res <- calculate_hotspots(example_data, "evictions")
+
+# View Global Moran’s I
+res$global_moran
+
+# Plot hotspots
+plot_hotspots(res$data)
