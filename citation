@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "evictionHotspots"
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Ajayi
+    given-names: Oluwafisayo
+version: 0.1.0
+date-released: 2026-01-09
+url: https://github.com/OluwafisayoAjayi/evictionHotspots
